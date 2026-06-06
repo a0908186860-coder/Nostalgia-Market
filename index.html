@@ -29,6 +29,11 @@
       background-size: 28px 28px, auto;
     }
     button { font: inherit; touch-action: manipulation; }
+    button {
+      appearance: none;
+      -webkit-appearance: none;
+      opacity: 1;
+    }
     button:focus-visible, input:focus-visible + .switch {
       outline: 4px solid #2276c9;
       outline-offset: 3px;
@@ -209,12 +214,19 @@
     .btn {
       min-height: 48px; padding: 8px 16px; cursor: pointer;
       border: 3px solid var(--wood-dark); border-radius: 13px;
-      color: #fff; background: var(--green); box-shadow: 0 4px 0 #294f32;
+      color: #fff !important; background-color: var(--green) !important; box-shadow: 0 4px 0 #294f32;
       font-size: clamp(17px, 1.7vw, 23px); font-weight: 900;
     }
     .btn:hover, .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #294f32; filter: brightness(1.08); }
-    .btn.secondary { background: #a34a3b; box-shadow: 0 4px 0 #682f27; }
-    .btn.light { color: var(--ink); background: #f7dda2; box-shadow: 0 4px 0 #a57642; }
+    .btn.secondary { color: #fff !important; background-color: #a34a3b !important; box-shadow: 0 4px 0 #682f27; }
+    .btn.light { color: var(--ink) !important; background-color: #f7dda2 !important; box-shadow: 0 4px 0 #a57642; }
+    #replayButton {
+      color: #fff !important;
+      background: var(--green) !important;
+      background-color: var(--green) !important;
+      border-color: var(--wood-dark) !important;
+      -webkit-text-fill-color: #fff;
+    }
     .btn:disabled { opacity: .52; cursor: not-allowed; transform: none; }
 
     .footer-bar {
