@@ -588,7 +588,7 @@
         candidates.forEach((product, index) => {
           let qty = 1;
           if (levelKey === "medium" && index === 1 && Math.random() > .35) qty = 2;
-          if (levelKey === "hard") qty = [1, 2, 3, 1, 1][index];
+          if (levelKey === "hard") qty = 1 + Math.floor(Math.random() * 3);
           target[product.id] = qty;
         });
         state.target = target;
